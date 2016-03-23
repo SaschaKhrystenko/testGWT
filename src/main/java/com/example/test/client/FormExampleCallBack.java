@@ -16,10 +16,11 @@ public class FormExampleCallBack implements AsyncCallback<EmployeeModel> {
         public void onSuccess(EmployeeModel result) {
                 //Redirect
                //Window.Location.assign("http://127.0.0.1:8888/GridPage.html");
-                Window.alert(result.getName() + " " + result.getPosition() + " " + result.getEmail());
 
+                Window.alert(result.getName() + " " + result.getPosition() + " " + result.getEmail()+" "+result.getId());
                 BasicGrid myGrid = new BasicGrid();
-                myGrid.modelList.add(result);
+                myGrid.getGrid().getStore().add(result);
+
 
 
         }

@@ -25,6 +25,10 @@
   <!-- Specify the paths for translatable code -->
   <source path='client' />
   <source path='shared' />
+
+
+  <!-- Specify the app servlets.                   -->
+ <!-- <servlet path='/EmployeeModel' class='com.example.test.server.EmployeeModelServiceImpl'/>-->
   
   <!-- http://docs.sencha.com/gxt/3.1/getting_started/sdm/SuperDevMode.html -->
   <!-- Use this when GWT < 2.7 -->

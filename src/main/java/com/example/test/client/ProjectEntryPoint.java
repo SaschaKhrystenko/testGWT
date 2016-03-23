@@ -114,7 +114,7 @@ public class ProjectEntryPoint implements EntryPoint {
     public void onModuleLoad() {
         FormExample myForm = new FormExample();
 
-        RootPanel.get("gxtForm").add(myForm.asWidget());
+        RootPanel.get().add(myForm.asWidget());
         //RootPanel.get().add(BasicGrid.getInstance());
 
 

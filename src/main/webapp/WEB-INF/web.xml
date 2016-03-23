@@ -5,21 +5,14 @@
     version="2.5">
 
     <servlet>
-        <servlet-name>com.example.test.Project MessageService</servlet-name>
-        <servlet-class>com.example.test.client.message.MessageServiceImpl</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>com.example.test.Project EmployeeModelService</servlet-name>
-        <servlet-class>com.example.test.client.EmployeeModelServiceImpl</servlet-class>
+        <servlet-class>com.example.test.server.EmployeeModelServiceImpl</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>com.example.test.Project MessageService</servlet-name>
-        <url-pattern>/Project/message</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>com.example.test.Project EmployeeModelService</servlet-name>
         <url-pattern>/Project/EmployeeModel</url-pattern>
     </servlet-mapping>
+
 
     <!-- Servlets -->
 

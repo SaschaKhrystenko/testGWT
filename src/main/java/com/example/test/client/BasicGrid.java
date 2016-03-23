@@ -25,6 +25,13 @@ import java.util.List;
 
 public class BasicGrid extends Composite {
 
+    Grid<EmployeeModel> grid;
+
+    ListStore<EmployeeModel> listStore;
+
+    public Grid<EmployeeModel> getGrid(){
+        return grid;
+    }
 
     // Property access definitions for the values in the NameModel
     public interface GridProperties extends PropertyAccess<EmployeeModel> {
@@ -47,11 +54,13 @@ public class BasicGrid extends Composite {
 
     public BasicGrid(){
         EmployeeModel myNameModel1 = new EmployeeModel("Sasha", "programmer", "SaschaKhrystenko@gmail.com");
+        EmployeeModel myNameModel2 = new EmployeeModel("Anna", "designer", "Something");
         modelList.add(myNameModel1);
+        modelList.add(myNameModel2);
 
 
         // Setup the ListStore.
-        ListStore<EmployeeModel> listStore = new ListStore<EmployeeModel>(gridProperties.id());
+        listStore= new ListStore<EmployeeModel>(gridProperties.id());
         listStore.addAll(modelList);
 
         // Setup the grid columns
@@ -82,7 +91,7 @@ public class BasicGrid extends Composite {
 
 
         // Setup the grid
-        Grid<EmployeeModel> grid = new Grid<EmployeeModel>(listStore, columnModel, gridView);
+        grid = new Grid<EmployeeModel>(listStore, columnModel, gridView);
         // Setup a size if not depending on the parent container to give it a size.
         grid.setPixelSize(500, 200);
         grid.setBorders(true);

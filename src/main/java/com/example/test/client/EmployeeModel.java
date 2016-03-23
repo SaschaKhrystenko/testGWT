@@ -7,18 +7,30 @@ import java.io.Serializable;
  */
 public class EmployeeModel implements Serializable {
 
-    private int id;
+    private Integer id;
     private String name;
     private String position;
     private String email;
 
+    private static int COUNTER = 0;
+
     public EmployeeModel() {
+        this.id = Integer.valueOf(COUNTER++);
     }
 
     public EmployeeModel(String name, String position, String email) {
+        this();
         this.name = name;
         this.position = position;
         this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

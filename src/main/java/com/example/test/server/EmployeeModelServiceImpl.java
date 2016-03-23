@@ -1,5 +1,7 @@
-package com.example.test.client;
+package com.example.test.server;
 
+import com.example.test.client.EmployeeModel;
+import com.example.test.client.EmployeeModelService;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**
